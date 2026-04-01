@@ -282,7 +282,7 @@ code {
 
 .menu {
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 600;
   color: rgb(70, 70, 70);
 }
 
@@ -321,7 +321,7 @@ hr {
 
 .profile .username {
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 /* sudo selectors */
@@ -840,4 +840,7 @@ hr {
 
 .action:hover {
   background-color: rgb(212, 212, 212);
+}
+.menu_left_stock_name{
+  font-weight: 600;
 }
