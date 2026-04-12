@@ -2,14 +2,49 @@ import React, { useState, useContext } from "react";
 import { Tooltip, Grow } from "@mui/material";
 import { watchlist } from "../Data/data";
 import GeneralContext from "./GeneralContext";
+import { Doughnutchart } from "./Doughnutchart";
 import {
   BarChartOutlined,
+  BorderColor,
   KeyboardArrowDown,
   KeyboardArrowUp,
   MoreHoriz,
 } from "@mui/icons-material";
 
 const WatchList = () => {
+
+  const labels= watchlist.map((subArray) =>subArray["name"]);
+  const data = {
+    labels,
+    datasets:[
+      {
+        label:"Price",
+        data : watchlist.map((stock) => stock.price),
+        backgroundColor:[
+          "rgb(255,148,132,0.5)",
+          "rgb(25,145,132,0.5)",
+          "rgb(55,124,132,0.5)",
+          "rgb(155,250,129,0.5)",
+          "rgb(75,169,182,0.5)",
+          "rgb(125,199,100,0.5)",
+          "rgb(125,55,100,0.5)",
+          "rgb(125,55,200,0.5)",
+        ],
+        backgroundColor:[
+          "rgb(255,148,132,1)",
+          "rgb(25,145,132,1)",
+          "rgb(55,124,132,1)",
+          "rgb(155,250,129,1)",
+          "rgb(75,169,182,1)",
+          "rgb(125,199,100,1)",
+          "rgb(125,55,100,1)",
+          "rgb(125,55,200,1)",
+        ]
+      }
+   ]
+  }
+
+
   return (
     <div className="watchlist-container">
       <div className="search-container">
@@ -28,6 +63,7 @@ const WatchList = () => {
           return <WatchListItem stock={stock} key={index} />;
         })}
       </ul>
+      <Doughnutchart data = {data}/>
     </div>
   );
 };
