@@ -26,7 +26,7 @@ function Signup() {
     // axios connects our frontend to backend
     try {
       const res = await axios.post(
-        "http://localhost:8080/auth/signup",
+        "https://tradexbackend-u8se.onrender.com/auth/signup",
         {
           email,
           username,
