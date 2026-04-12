@@ -26,7 +26,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/auth/login",
+        "https://tradexbackend-u8se.onrender.com/auth/login",
         inputValue,
         { withCredentials: true }
       );
