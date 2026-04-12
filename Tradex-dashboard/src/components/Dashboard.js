@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { GeneralContextProvider } from "./GeneralContext";
 
 import Apps from "./Apps";
 import Funds from "./Funds";
@@ -12,7 +13,9 @@ import WatchList from "./WatchList"; // Add correct import path
 const Dashboard = () => {
   return (
     <div className="dashboard-container">
+      <GeneralContextProvider>
         <WatchList />
+      </GeneralContextProvider>
       <div className="content">
         <Routes>
           <Route exact path="/" element={<Summary />} />
