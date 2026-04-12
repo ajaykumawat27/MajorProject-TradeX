@@ -28,8 +28,13 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto" style={{ marginRight: "40px" }}>
             <li className="nav-item">
-              <Link className="nav-link fw-medium" to={"/signup"}>
+              <Link className="nav-link fw-medium" to={"/auth/signup"}>
                 Signup
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link fw-medium" to={"/auth/login"}>
+                Login
               </Link>
             </li>
             <li className="nav-item">
