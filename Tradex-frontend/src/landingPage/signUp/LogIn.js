@@ -36,7 +36,7 @@ const Login = () => {
         handleSuccess(message);
         setInputValue({ email: "", password: "" }); // reset only on success
         setTimeout(() =>{
-          window.location.href = "http://localhost:3000/";
+          window.location.href = "https://tradexdashboard-0o0s.onrender.com";
         }, 3000);
       } else {
         handleError(message);
