@@ -32,6 +32,6 @@ root.render(
       <Route path='*' element={<NotFoundPage/>}/>
     </Routes>
     <Footer/>
-  </CookiesProvider>
   </BrowserRouter>
+  </CookiesProvider>
 );
