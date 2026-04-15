@@ -1,4 +1,7 @@
 import React from 'react';
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { CookiesProvider } from "react-cookie";
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import HomePage from './landingPage/home/HomePage';
@@ -15,6 +18,7 @@ import NotFoundPage from './landingPage/NotFoundPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <CookiesProvider>
   <BrowserRouter>
   <Navbar/>
     <Routes>
@@ -29,4 +33,5 @@ root.render(
     </Routes>
     <Footer/>
   </BrowserRouter>
+  </CookiesProvider>
 );
