@@ -6,7 +6,7 @@ const cors = require("cors");
 // Cross-Origin Resource Sharing
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5000"],
+    origin: ["https://tradexdashboard-0o0s.onrender.com", "https://tradexfrontend-huu1.onrender.com"],
     credentials: true,
   })
 );
