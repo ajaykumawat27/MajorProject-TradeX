@@ -26,7 +26,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/auth/login",
+        "https://tradexbackend-u8se.onrender.com/auth/login",
         inputValue,
         { withCredentials: true }
       );
@@ -36,7 +36,7 @@ const Login = () => {
         handleSuccess(message);
         setInputValue({ email: "", password: "" }); // reset only on success
         setTimeout(() =>{
-          window.location.href = "http://localhost:3000/";
+          window.location.href = "https://tradexdashboard-0o0s.onrender.com";
         }, 3000);
       } else {
         handleError(message);
