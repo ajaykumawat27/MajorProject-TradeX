@@ -6,8 +6,7 @@ const cors = require("cors");
 // Cross-Origin Resource Sharing
 app.use(
   cors({
-    origin: "http://localhost:5000",
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "http://localhost:5000"],
     credentials: true,
   })
 );
@@ -15,6 +14,7 @@ app.use(
 
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 const {HoldingsModel} = require('./model/HoldingsModel');
 const {OrdersModel} = require('./model/OrdersModel');
@@ -24,6 +24,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 const authRoute = require('./Routes/AuthRoute');
 
 //authentication route

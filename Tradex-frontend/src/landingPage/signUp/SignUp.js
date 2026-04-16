@@ -36,19 +36,16 @@ function Signup() {
       );
       toast.success(`Welcome ${res.data.user.username} 🎉`);
     }
-    catch (err) {
-      // handle response from backend - user already exist! or internal server err
-      if (err.response.status === 400) {
-        toast.error(err.response.data.message);
-      }
-      else if (err.response.status === 500) {
-        toast.error(err.response.data.message);
-      }
-      else {
-      // network error / backend down
-      toast.error("Server not responding");
+
+ catch (err) {
+  if (err.response) {
+    console.log("Backend Error", err.response.data);
+  } else if (err.request) {
+    console.log("No Response", err.request);
+  } else {
+    console.log("Other Error", err.message);
   }
-    }
+}
   };
 
   return (
