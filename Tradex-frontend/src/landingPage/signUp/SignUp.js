@@ -26,7 +26,7 @@ function Signup() {
     // axios connects our frontend to backend
     try {
       const res = await axios.post(
-        "https://tradexbackend-u8se.onrender.com/auth/signup",
+        "http://localhost:8080/auth/signup",
         {
           email,
           username,
@@ -37,15 +37,15 @@ function Signup() {
       toast.success(`Welcome ${res.data.user.username} 🎉`);
     }
 
- catch (err) {
-  if (err.response) {
-    console.log("Backend Error", err.response.data);
-  } else if (err.request) {
-    console.log("No Response", err.request);
-  } else {
-    console.log("Other Error", err.message);
-  }
-}
+    catch (err) {
+      if (err.response) {
+        console.log("Backend Error", err.response.data);
+      } else if (err.request) {
+        console.log("No Response", err.request);
+      } else {
+        console.log("Other Error", err.message);
+      }
+    }
   };
 
   return (

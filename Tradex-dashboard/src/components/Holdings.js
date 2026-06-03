@@ -6,7 +6,7 @@ const Holdings = () => {
   const [allHoldings, setallHoldings] = useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:8080/allHoldings").then((res)=>{
+    axios.get("http://localhost:8080/allHoldings",{withCredentials: true}).then((res)=>{
         setallHoldings(res.data);
       })
   },[]);//   []); this prevents multiple run
