@@ -7,9 +7,9 @@ function Navbar() {
     >
       <div className="container-fluid px-4">
         <Link className="navbar-brand" to={"/"}>
-          <i className="fa-solid fa-chart-line text-success" style={{ fontSize: "35px"}}></i>
+          <i className="fa-solid fa-chart-line text-success" style={{ fontSize: "35px" }}></i>
           <img
-            src="media/images/latest_logo_tradex.png"
+            src="/media/images/latest_logo_tradex.png"
             style={{ width: "200px" }}
             alt="Logo"
           />

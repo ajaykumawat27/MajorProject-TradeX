@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./SignupLogin.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -26,7 +26,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "https://tradexbackend-u8se.onrender.com/auth/login",
+        "http://localhost:8080/auth/login",
         inputValue,
         { withCredentials: true }
       );
@@ -35,8 +35,8 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setInputValue({ email: "", password: "" }); // reset only on success
-        setTimeout(() =>{
-          window.location.href = "https://tradexdashboard-0o0s.onrender.com";
+        setTimeout(() => {
+          window.location.href = "http://localhost:3000";
         }, 3000);
       } else {
         handleError(message);

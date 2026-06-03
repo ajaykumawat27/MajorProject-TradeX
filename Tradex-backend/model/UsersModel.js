@@ -3,7 +3,7 @@ const { Schema } = require("mongoose");
 const bcrypt = require("bcryptjs");
 
 const UsersSchema = new Schema({
-    email: {
+  email: {
     type: String,
     required: [true, "Your email address is required"],
     unique: true,
@@ -16,14 +16,19 @@ const UsersSchema = new Schema({
     type: String,
     required: [true, "Your password is required"],
   },
-   createdAt: {
+  createdAt: {
     type: Date,
-    default: new Date(),
+    default: Date.now,
   },
 });
 
-UsersSchema.pre("save",async function(){
-    this.password = await bcrypt.hash(this.password,12);//12 salt rounds
+// by using pre it hashes the password before saving
+UsersSchema.pre("save", async function (next) {
+  // and if a user only changes other fields then it doesn't hashes the hashed password again
+  if (!this.isModified("password")) {
+    return next();
+  }
+  this.password = await bcrypt.hash(this.password, 12);//12 salt rounds
 });
 
 // module.exports = {UsersSchema};
