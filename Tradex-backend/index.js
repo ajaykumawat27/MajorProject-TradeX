@@ -6,7 +6,12 @@ const cors = require("cors");
 // Cross-Origin Resource Sharing
 app.use(
   cors({
-    origin: ["https://tradexdashboard-0o0s.onrender.com", "https://tradexfrontend-huu1.onrender.com"],
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "https://major-project-trade-x.vercel.app",
+      "https://major-project-tradex-latest.vercel.app"
+    ],
     credentials: true,
   })
 );

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero(){
     return(
         <div style={{marginTop:"8rem"}} className='container'>
@@ -15,12 +17,13 @@ function Hero(){
                     Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.
                 </p>
                 <div className='d-flex justify-content-center'>
-                    <button
+                    <Link
+                        to="/auth/signup"
                         className='btn btn-primary p-2 p-md-3 fw-medium mb-5 w-100 w-md-50 w-lg-25'
-                        style={{ maxWidth: '200px', color: "white" }}
+                        style={{ maxWidth: '200px', color: "white", textDecoration: "none" }}
                     >
                         Sign up for free
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
