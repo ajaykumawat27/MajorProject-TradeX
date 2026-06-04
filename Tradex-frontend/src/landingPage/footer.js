@@ -6,12 +6,12 @@ function Footer() {
           <a className="navbar-brand" href="#">
             <i className="fa-solid fa-chart-line text-success" style={{ fontSize: "17px" }}>
             </i>
-            <img src="media/images/latest_logo_tradex.png" style={{ width: "100px" }} alt="Logo"/>
+            <img src="/media/images/latest_logo_tradex.png" style={{ width: "100px" }} alt="Logo"/>
           </a>
           <p className="mt-3">© 2010 - 2026, Tradex Broking Ltd. All rights reserved.</p>
-          <a><img src="media/images/x-twitter.svg" alt=""/></a>
-          <a className="mx-3"><img src="media/images/whatsapp-logo.svg" alt="" style={{width:"1.5rem"}}/></a>
-          <a><img src="media/images/youtube.svg" alt=""/></a>
+          <a><img src="/media/images/x-twitter.svg" alt=""/></a>
+          <a className="mx-3"><img src="/media/images/whatsapp-logo.svg" alt="" style={{width:"1.5rem"}}/></a>
+          <a><img src="/media/images/youtube.svg" alt=""/></a>
         </div>
 
         <div className="col-2">

@@ -19,7 +19,7 @@ function Stats(){
                     <p className='text-muted fs-6 fs-md-5'>With initiatives like Nudge and Kill Switch, we don't just facilitate transactions, but actively help you do better with your money.</p>
                 </div>
                 <div className='col-12 col-md-6 p-2 text-center text-md-start'>
-                    <img src='media/images/ecosystem.png' style={{width:"100%", maxWidth:"400px"}} className='img-fluid'/>
+                    <img src='/media/images/ecosystem.png' style={{width:"100%", maxWidth:"400px"}} className='img-fluid'/>
                     <div className='text-center mx-2 p-3 p-md-5'>
                         <a href='' style={{textDecoration:"none"}} className='d-block d-md-inline-block mb-3 mb-md-0'>Explore our products&nbsp;&nbsp;<i className="fa-solid fa-arrow-right-long mx-2"></i></a>
                         <a href='' style={{textDecoration:"none"}} className='d-block d-md-inline-block'>Try TradeX demo&nbsp;&nbsp;<i className="fa-solid fa-arrow-right-long"></i></a>

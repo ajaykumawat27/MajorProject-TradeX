@@ -10,7 +10,7 @@ function Team() {
         <div className="row mt-5 mx-5 text-muted fs-5" style={{ lineHeight: "1.8" }}>
 
             <div className="col-6 pt-5 text-center">
-                <img src="media/images/nithinKamath.jpg" style={{borderRadius:"100%",width:"45%"}}/>
+                <img src="/media/images/nithinKamath.jpg" alt="nithinKamath" style={{borderRadius:"100%",width:"45%"}}/>
                 <p className="fs-5 mt-5 mb-0 fw-medium" style={{fontSize:"16px"}}>Parth Indora</p>
                 <p className="fw-medium" style={{fontSize:"16px"}}>Founder, CEO</p>
             </div>

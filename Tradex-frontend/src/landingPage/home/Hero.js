@@ -4,7 +4,7 @@ function Hero(){
             <div className='row text-center'>
                 <div className='col-12'>
                     <img
-                        src='media/images/HiUser.svg'
+                        src='/media/images/HiUser.svg'
                         alt='Hero Image'
                         className='LandingPageHomeHeroImg mx-auto d-block img-fluid'
                         style={{ width: '100%', maxWidth: '800px' }}
