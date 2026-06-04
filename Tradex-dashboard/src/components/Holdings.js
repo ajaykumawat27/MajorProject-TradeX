@@ -6,7 +6,8 @@ const Holdings = () => {
   const [allHoldings, setallHoldings] = useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:8080/allHoldings",{withCredentials: true}).then((res)=>{
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+    axios.get(`${backendUrl}/allHoldings`,{withCredentials: true}).then((res)=>{
         setallHoldings(res.data);
       })
   },[]);//   []); this prevents multiple run

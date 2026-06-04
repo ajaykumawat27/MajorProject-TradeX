@@ -13,7 +13,7 @@ const Menu = () => {
   const activeMenuClass = "menu selected";
   return (
     <div className="menu-container">
-      <img src="./media/images/latest_logo_tradex.png" style={{ width: "70px" }} alt="Tradex Logo" />
+      <img src="/media/images/latest_logo_tradex.png" style={{ width: "70px" }} alt="Tradex Logo" />
       <div className="menus">
         <ul>
           <li>
