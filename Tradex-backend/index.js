@@ -7,10 +7,8 @@ const cors = require("cors");
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
-      "http://localhost:5173",
-      "https://major-project-trade-x.vercel.app",
-      "https://major-project-tradex-latest.vercel.app"
+      "http://localhost:3000",//dashboard
+      "http://localhost:5000",//frontend
     ],
     credentials: true,
   })
@@ -35,7 +33,6 @@ const { verifyToken } = require('./Middlewares/AuthMiddleware');
 
 //authentication route
 app.use('/auth', authRoute);
-
 
 app.get("/", (req, res) => {
   res.send("Hi root");
@@ -65,6 +62,9 @@ app.post("/newOrder", verifyToken, async (req, res) => {
   res.send("order saved");
 });
 
+app.get("/check-auth", verifyToken, (req, res) => {
+  res.json({ ok: true, user: req.user.username });
+});
 
 mongoose.connect(process.env.ATLASDB_URL)
   .then(() => {
