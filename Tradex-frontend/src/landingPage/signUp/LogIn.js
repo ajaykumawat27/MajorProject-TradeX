@@ -32,14 +32,19 @@ const Login = () => {
         { withCredentials: true }
       );
 
-      const { success, message } = data;
+      const { success, message, token } = data;
       if (success) {
         handleSuccess(message);
         setInputValue({ email: "", password: "" }); // reset only on success
         setTimeout(() => {
-          const dashboardUrl = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3000";
+          const dashboardUrl = process.env.DASHBOARD_URL || "http://localhost:3000";
           window.location.href = dashboardUrl;
         }, 3000);
+        res.cookie("JwtToken", token, {
+          httpOnly: true,
+          secure: true,
+          sameSite: "none"
+        });
       } else {
         handleError(message);
       }

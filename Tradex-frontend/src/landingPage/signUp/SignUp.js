@@ -25,7 +25,7 @@ function Signup() {
     //it will send data in JSON (everything after ["http://localhost:8080/auth/signup"] is data) to (/auth/signup)
     // axios connects our frontend to backend
     try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+      const backendUrl = process.env.BACKEND_URL || "http://localhost:8080";
       const res = await axios.post(
         `${backendUrl}/auth/signup`,
         {

@@ -6,7 +6,7 @@ const Holdings = () => {
   const [allHoldings, setallHoldings] = useState([]);
 
   useEffect(()=>{
-    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+    const backendUrl = process.env.BACKEND_URL || "http://localhost:8080";
     axios.get(`${backendUrl}/allHoldings`,{withCredentials: true}).then((res)=>{
         setallHoldings(res.data);
       })

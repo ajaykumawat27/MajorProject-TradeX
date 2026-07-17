@@ -7,8 +7,13 @@ const cors = require("cors");
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",//dashboard
-      "http://localhost:5000",//frontend
+      // in production
+      process.env.FRONTEND_URL,
+      process.env.DASHBOARD_URL,
+
+      // in developement
+      // "http://localhost:3000",//dashboard
+      // "http://localhost:5000",//frontend
     ],
     credentials: true,
   })
