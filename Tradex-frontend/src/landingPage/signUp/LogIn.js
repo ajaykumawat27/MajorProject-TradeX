@@ -25,7 +25,7 @@ const Login = () => {
     }
 
     try {
-      const backendUrl = process.env.BACKEND_URL || "http://localhost:8080";
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
       const { data } = await axios.post(
         `${backendUrl}/auth/login`,
         inputValue,
@@ -37,7 +37,7 @@ const Login = () => {
         handleSuccess(message);
         setInputValue({ email: "", password: "" }); // reset only on success
         setTimeout(() => {
-          const dashboardUrl = process.env.DASHBOARD_URL || "http://localhost:3000";
+          const dashboardUrl = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3000";
           window.location.href = dashboardUrl;
         }, 3000);
       } else {
