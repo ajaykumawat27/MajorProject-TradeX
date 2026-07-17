@@ -25,7 +25,7 @@ const Login = () => {
     }
 
     try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+      const backendUrl = process.env.BACKEND_URL || "http://localhost:8080";
       const { data } = await axios.post(
         `${backendUrl}/auth/login`,
         inputValue,
